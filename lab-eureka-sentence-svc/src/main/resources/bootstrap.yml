@@ -1,0 +1,42 @@
+---
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8001
+
+---
+spring:
+  profiles: sentence
+  application:
+    name: get-sentence
+
+---
+spring:
+  profiles: subject
+  application:
+    name: get-subject
+    
+---
+spring:
+  profiles: verb
+  application:
+    name: get-verb
+    
+---
+spring:
+  profiles: article
+  application:
+    name: get-article
+
+---
+spring:
+  profiles: adjective
+  application:
+    name: get-adjective
+    
+---
+spring:
+  profiles: noun
+  application:
+    name: get-noun
+    

@@ -1,0 +1,15 @@
+---
+spring:
+  profiles: primary
+  application:
+    name: lab-4-eureka-server-primary
+---
+spring:
+  profiles: secondary
+  application:
+    name: lab-4-eureka-server-secondary
+---
+spring:
+  profiles: tertiary
+  application:
+    name: lab-4-eureka-server-tertiary

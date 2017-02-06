@@ -1,0 +1,33 @@
+---
+spring:
+  profiles: primary
+server:
+  port: 8010
+eureka:
+  instance:
+    hostname: eureka-primary
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-secondary:8020/eureka/,http://eureka-tertiary:8030/eureka/
+---
+spring:
+  profiles: secondary
+server:
+  port: 8020
+eureka:
+  instance:
+    hostname: eureka-secondary
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-primary:8010/eureka/,http://eureka-tertiary:8030/eureka/
+---
+spring:
+  profiles: tertiary
+server:
+  port: 8030
+eureka:
+  instance:
+    hostname: eureka-tertiary
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-primary:8010/eureka/,http://eureka-secondary:8020/eureka/
