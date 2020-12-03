@@ -6,5 +6,7 @@ spring:
     config:
       uri: http://localhost:8001
 eureka:
-      instance:
-        instanceId: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${random.value}}
+  instance:
+    instanceId: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${random.value}}
+    metadata-map:
+      management.port: ${management.port:8081}
